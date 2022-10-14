@@ -9,7 +9,8 @@ public class LevelStarter : MonoBehaviour
     public GameObject countDown1;
     public GameObject countDownGO;
     public GameObject fadeIn;
-
+    //public AudioSource readyFX;
+    //public AudioSource goFX;
 
     // Start is called before the first frame update
     void Start()
@@ -21,12 +22,16 @@ public class LevelStarter : MonoBehaviour
     {
         yield return new WaitForSeconds(1.5f);
         countDown3.SetActive(true);
+       // readyFX.Play();
         yield return new WaitForSeconds(1);
         countDown2.SetActive(true);
+       // readyFX.Play();
         yield return new WaitForSeconds(1);
         countDown1.SetActive(true);
+       // readyFX.Play();
         yield return new WaitForSeconds(1);
         countDownGO.SetActive(true);
-        yield return new WaitForSeconds(1);
+        // goFX.Play();
+        PlayerMove.canMove = true;
     }
 }
