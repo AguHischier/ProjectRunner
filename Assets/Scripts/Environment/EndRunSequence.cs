@@ -24,11 +24,11 @@ public class EndRunSequence : MonoBehaviour
 
     IEnumerator EndSequence()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(2);
         liveDis.SetActive(false);
         liveCoins.SetActive(false);
         endScreen.SetActive(true);
         yield return new WaitForSeconds(5);
-        fadeOut.SetActive(true);
+        //fadeOut.SetActive(true);
     }
 }
